@@ -1,0 +1,101 @@
+niche,score,rpm_bench_low,rpm_bench_high,bench_group,median_long_video_min,reach_views_per_video_per_sub,median_views_growth_1y_pct,channels_1M_plus_of_50,new_channels_since_2024,new_with_300k_views_30d,faceless_share
+lawyer reacts legal analysis,76.4,8,22,Legal & Tax,18.4,0.32,33,4,12,5,0.06
+retirement planning social security medicare,76.1,10,25,Personal Finance,14.8,0.66,53,0,25,2,0.08
+sleep science insomnia,74.6,4,11,Health (Science),219.1,0.59,29,0,20,7,0.56
+frugal living saving money,73.5,10,25,Personal Finance,13.6,0.51,29,2,9,2,0.04
+car buying advice dealership,73.1,10,25,Personal Finance,13.6,0.84,22,5,12,4,0.06
+legal rights know your rights,71.0,8,22,Legal & Tax,19.4,0.73,20,2,18,3,0.2
+airline pilots aviation,70.9,5,12,Career & Jobs,13.8,1.04,36,3,11,2,0.36
+veterans VA benefits,66.6,8,22,Legal & Tax,11.3,0.29,38,0,23,2,0.06
+luxury real estate home tours,66.4,7,17,Real Estate,12.1,0.39,16,1,1,1,0.14
+disability benefits SSDI,64.3,8,22,Legal & Tax,11.3,0.38,29,0,13,1,0.06
+small business owner advice,64.2,8,19,Business & SaaS,13.7,0.18,16,1,6,2,0.06
+electric vehicles EV news,63.8,4,11,AI & Technology,14.4,1.23,18,0,7,2,0.1
+senior health tips for older adults,62.1,4,11,Health (Science),14.0,0.42,83,0,24,4,0.22
+American history presidents,61.4,3,7,History,21.0,0.78,23,1,10,4,0.22
+housing market mortgage rates,60.8,7,17,Real Estate,12.8,0.29,26,1,9,1,0.1
+homesteading off grid,59.9,4,11,~DIY/Home (≈Health),22.9,0.55,22,2,6,1,0.04
+taxes IRS tax tips,59.8,8,22,Legal & Tax,8.5,0.45,51,0,13,0,0.04
+interrogation analysis,59.1,3,7,True Crime,44.0,0.75,33,4,25,7,0.32
+police bodycam footage,58.7,3,7,True Crime,15.3,0.9,35,3,21,7,0.74
+estate planning wills trusts probate,57.9,8,22,Legal & Tax,6.6,0.4,36,0,7,0,0.02
+World War 2 history documentary,57.2,3,7,History,24.2,1.26,27,4,22,5,0.32
+tools reviews,57.2,6,14,Software Reviews,6.4,0.44,18,5,14,4,0.28
+nutrition longevity healthy aging,55.8,4,11,Health (Science),17.6,0.49,39,3,26,1,0.1
+old Hollywood classic movie stars,55.1,1,3,Entertainment,23.7,1.27,65,1,22,5,0.42
+home buying first time buyer,54.6,7,17,Real Estate,9.9,0.33,13,4,8,2,0.06
+tiny homes,54.4,7,17,Real Estate,11.2,0.75,20,0,12,0,0.28
+insurance explained,54.2,10,25,Personal Finance,9.1,0.3,23,1,9,0,0.04
+economics explained,54.1,8,19,Business & SaaS,17.2,0.31,14,9,7,1,0.14
+aviation disasters plane crash investigation,53.2,3,7,History,14.6,1.11,27,2,17,3,0.5
+stock market investing dividends,53.1,10,25,Personal Finance,17.8,0.17,16,1,2,0,0.08
+fitness over 50,52.9,4,11,Health (Science),12.4,0.29,27,2,11,2,0.12
+missing persons cases,52.7,3,7,True Crime,28.6,0.99,29,3,14,1,0.28
+stoicism philosophy,52.4,3,8,Motivation,18.4,0.26,30,1,29,2,0.42
+national parks USA travel,52.2,2,5,Travel,21.1,0.62,13,1,2,1,0.16
+trade jobs electrician plumber careers,52.0,5,12,Career & Jobs,10.4,0.44,32,1,12,0,0.16
+woodworking,51.9,4,11,~DIY/Home (≈Health),19.5,0.76,7,8,3,1,0.16
+classic car restoration,51.8,4,11,~DIY/Home (≈Health),18.8,0.69,16,3,12,1,0.18
+credit score credit cards debt,51.4,10,25,Personal Finance,9.6,0.39,13,0,7,0,0.0
+gardening vegetable garden,51.2,4,11,~DIY/Home (≈Health),18.8,0.24,12,3,7,2,0.18
+true crime documentary,50.6,3,7,True Crime,35.3,0.58,20,14,10,3,0.36
+trucking industry truck drivers,50.4,5,12,Career & Jobs,13.7,0.63,14,0,9,0,0.06
+mafia organized crime history,49.6,3,7,True Crime,21.0,0.56,23,1,21,2,0.34
+classic TV shows nostalgia,48.9,1,3,Entertainment,18.2,1.42,32,9,7,3,0.34
+paranormal ghost stories,48.8,1,3,Entertainment,32.8,0.68,23,3,9,3,0.22
+elder care caregiving dementia,48.7,4,11,Health (Science),14.4,0.39,34,0,9,0,0.0
+menopause women's health,48.6,4,11,Health (Science),18.0,0.55,33,3,11,0,0.06
+boxing history,48.3,2,4,Sports,13.8,1.77,25,4,15,4,0.34
+history documentary for sleep,48.0,2,6,Relaxation,147.5,0.57,19,6,19,5,0.4
+courtroom trials court cases,47.1,3,7,True Crime,23.8,0.96,10,3,29,5,0.3
+personal finance budgeting,46.6,10,25,Personal Finance,14.9,0.39,11,5,5,0,0.04
+unsolved mysteries,46.1,3,7,True Crime,31.8,0.97,14,4,19,2,0.32
+relationship advice marriage,46.0,4,10,~Parenting/Relationships,14.9,0.24,28,7,11,1,0.12
+RV living full time,45.7,2,5,Travel,20.4,1.0,36,0,9,0,0.04
+golf instruction,45.6,2,4,Sports,12.0,0.9,21,1,5,1,0.04
+men's health testosterone,45.6,4,11,Health (Science),9.4,0.49,15,4,12,2,0.08
+psychology human behavior,45.6,3,8,Motivation,9.4,0.7,64,3,30,0,0.38
+NFL football analysis,44.9,2,4,Sports,14.9,0.48,19,4,8,3,0.18
+business documentaries company stories,44.9,8,19,Business & SaaS,14.9,0.32,13,4,12,0,0.2
+shipwrecks maritime disasters,44.9,3,7,History,22.0,0.55,16,4,13,2,0.44
+real estate investing landlord,44.8,7,17,Real Estate,17.9,0.14,14,2,3,0,0.04
+corporate fraud white collar crime documentary,44.4,3,7,True Crime,22.3,0.19,21,7,21,5,0.26
+wildlife nature documentary,44.1,4,11,~Science/Education (≈Health),8.1,0.59,19,8,18,2,0.44
+Bible study Christian teaching,44.0,3,8,~Religion/Philosophy (≈Motivation),29.3,0.25,24,3,6,0,0.12
+cold cases unsolved murders,43.9,3,7,True Crime,27.6,0.76,13,2,22,1,0.32
+survival prepping,43.9,2,6,~Outdoors/Hobby (≈Food),17.0,0.63,20,3,13,2,0.4
+doctor explains medical education,43.0,4,11,Health (Science),13.4,0.35,8,9,3,1,0.12
+HOA horror stories neighbor disputes,42.6,1,3,Entertainment,21.3,1.72,192,0,43,0,0.42
+famous heists robbery documentary,42.3,3,7,True Crime,18.2,1.53,10,9,16,3,0.3
+chess,42.1,2,4,Sports,12.4,0.54,19,1,17,4,0.22
+side hustles make money online,41.3,8,19,Business & SaaS,10.4,0.29,8,1,8,0,0.04
+space astronomy universe,41.1,4,11,~Science/Education (≈Health),12.5,0.42,12,6,16,2,0.52
+AI tools tutorials,40.9,4,11,AI & Technology,6.2,0.12,28,8,19,2,0.16
+auto repair mechanic,40.6,4,11,~DIY/Home (≈Health),11.9,1.17,17,4,4,0,0.12
+ancient history civilizations,39.8,3,7,History,26.7,0.89,9,7,9,1,0.36
+military history battles,39.7,3,7,History,21.1,0.78,9,12,11,2,0.46
+cybersecurity explained,39.0,4,11,AI & Technology,14.5,0.22,36,8,7,0,0.1
+mental health anxiety therapy,38.5,4,11,Health (Science),18.0,0.6,13,4,7,0,0.04
+firearms gun reviews,37.3,2,6,~Outdoors/Hobby (≈Food),16.9,0.51,9,8,6,2,0.1
+scams fraud con artists stories,37.2,3,7,True Crime,15.7,0.22,16,3,18,2,0.2
+Cold War history,36.5,3,7,History,25.1,0.75,20,5,20,0,0.5
+Excel and software tutorials,35.3,6,14,Software Reviews,6.7,0.22,14,7,5,0,0.08
+geopolitics analysis,35.0,1,3,Entertainment,16.6,0.23,29,15,3,1,0.22
+hunting deer elk,34.9,2,6,~Outdoors/Hobby (≈Food),19.9,1.02,14,2,10,0,0.06
+rock music history,34.5,1,3,Entertainment,5.7,2.77,21,21,7,2,0.18
+audiobooks classic literature,33.7,2,6,Relaxation,77.1,0.46,11,0,12,0,0.22
+home improvement DIY repairs,32.2,4,11,~DIY/Home (≈Health),12.9,0.76,12,15,3,0,0.16
+conspiracy theories explained,32.1,1,3,Entertainment,26.3,0.33,13,15,6,2,0.08
+BBQ smoking meat cooking,32.0,2,6,Food & Recipe,12.9,1.07,23,5,6,0,0.08
+archaeology discoveries,31.8,3,7,History,21.0,0.2,10,10,18,3,0.36
+prison life documentary,31.6,3,7,True Crime,21.0,0.42,20,7,7,0,0.16
+US politics commentary,30.3,1,3,Entertainment,13.8,0.16,18,20,4,4,0.02
+engineering failures disasters,30.2,3,7,History,18.2,0.47,8,9,13,1,0.28
+life stories of elderly people,29.3,1,3,Entertainment,16.9,0.83,17,7,27,2,0.22
+reddit stories narration revenge,29.0,1,3,Entertainment,24.8,0.45,5,3,18,2,0.44
+weight loss diet,28.6,4,11,Health (Science),12.2,0.29,9,4,5,0,0.0
+bass fishing,25.4,2,6,~Outdoors/Hobby (≈Food),21.4,0.38,12,4,0,0,0.02
+pro wrestling history,20.3,2,4,Sports,14.9,0.4,9,3,12,0,0.26
+movie explained film analysis,16.1,1,3,Entertainment,12.4,0.46,6,17,11,1,0.42
+horror stories narration,15.4,1,3,Entertainment,46.4,0.35,5,6,4,0,0.52
+celebrity documentaries,11.1,1,3,Entertainment,20.6,0.17,11,9,13,0,0.22
