@@ -7,7 +7,7 @@ D = os.path.dirname(os.path.abspath(__file__))
 OUT = sys.argv[1] if len(sys.argv) > 1 else os.path.join(D, 'frames')
 os.makedirs(OUT, exist_ok=True)
 
-W, H, FPS, DUR = 1920, 1080, 30, 7.6
+W, H, FPS, DUR = 1920, 1080, 30, 12.0
 K = 2                                   # supersampling
 RED = (227, 38, 46); WHITE = (255, 255, 255); GREY = (170, 170, 176)
 f = lambda w, s: ImageFont.truetype(os.path.join(D, f'roboto-{w}.woff'), s * K)
@@ -35,16 +35,16 @@ def seg(t, a, b): return clamp((t - a) / (b - a))
 def ease_out(x): return 1 - (1 - x) ** 3
 def ease_io(x): return 4 * x ** 3 if x < .5 else 1 - (-2 * x + 2) ** 3 / 2
 def back(x, s=1.9): x -= 1; return 1 + (s + 1) * x ** 3 + s * x ** 2
-def press(t, t0):  # button squash: down 0.12s, back up with overshoot 0.25s
+def press(t, t0):  # button squash: down 0.12s, back up with overshoot 0.4s
     if t < t0: return 1.0
     if t < t0 + .12: return 1 - .1 * ease_out(seg(t, t0, t0 + .12))
-    return .9 + .1 * back(seg(t, t0 + .12, t0 + .4))
+    return .9 + .1 * back(seg(t, t0 + .12, t0 + .55))
 
 # ---------- timeline ----------
-T_SUB, T_BELL, T_LIKE = 1.45, 2.75, 4.05          # click moments
-PATH = [(0.55, (BW + 40, BH + 110)), (1.3, cpos(SUB)), (1.95, cpos(SUB)),
-        (2.6, cpos(BELL)), (3.25, cpos(BELL)), (3.9, (LIKE[0] + 75, LIKE[1] + 45)),
-        (4.6, (LIKE[0] + 75, LIKE[1] + 45)), (5.3, (BW + 60, BH + 120))]
+T_SUB, T_BELL, T_LIKE = 2.8, 4.9, 7.2          # click moments
+PATH = [(1.3, (BW + 40, BH + 110)), (2.5, cpos(SUB)), (3.5, cpos(SUB)),
+        (4.55, cpos(BELL)), (5.9, cpos(BELL)), (6.85, (LIKE[0] + 75, LIKE[1] + 45)),
+        (8.3, (LIKE[0] + 75, LIKE[1] + 45)), (9.3, (BW + 60, BH + 120))]
 
 def cursor_at(t):
     if t <= PATH[0][0]: return PATH[0][1]
@@ -79,7 +79,7 @@ m = Image.new('L', av.size, 0); ImageDraw.Draw(m).ellipse((0, 0, av.width - 1, a
 av.putalpha(m)
 
 def ripple(C, cx, cy, t, t0, rmax, color):
-    p = seg(t, t0, t0 + .5)
+    p = seg(t, t0, t0 + .8)
     if 0 < p < 1:
         d = ImageDraw.Draw(C); r = S(rmax * ease_out(p)); a = int(200 * (1 - p))
         d.ellipse((S(cx) - r, S(cy) - r, S(cx) + r, S(cy) + r), outline=color + (a,), width=S(4))
@@ -108,7 +108,7 @@ def frame(t):
         L = pill(sw, sh, (255, 255, 255, 255)); centered_text(L, S(sw / 2), S(sh / 2), 'Subscribe', f(500, 38), (15, 15, 15))
     else:
         L = pill(sw, sh, (52, 52, 56, 255))
-        p = back(seg(t, T_SUB + .12, T_SUB + .45))
+        p = back(seg(t, T_SUB + .12, T_SUB + .6))
         ck = Image.new('RGBA', (S(50), S(50)), (0, 0, 0, 0)); centered_text(ck, S(25), S(25), I_CHECK, icon(40), WHITE)
         if p > 0: paste_scaled(L, ck, 62, sh / 2, max(.01, p))
         centered_text(L, S(sw / 2 + 25), S(sh / 2), 'Subscribed', f(500, 36), WHITE)
@@ -124,18 +124,19 @@ def frame(t):
     centered_text(ic, S(35), S(35), I_BELL_RING if rung else I_BELL_O, icon(50), WHITE)
     rot = 0
     if rung:
-        k = seg(t, T_BELL + .12, T_BELL + 1.0)
-        rot = 28 * math.sin(k * math.pi * 7) * (1 - k) if k < 1 else 0
+        k = seg(t, T_BELL + .12, T_BELL + 1.7)
+        rot = 26 * math.sin(k * math.pi * 10) * (1 - k) if k < 1 else 0
     paste_scaled(L, ic, bd / 2, bd / 2, 1, rot)
     ripple(C, ox + bx + bd / 2, oy + by + bd / 2, t, T_BELL + .12, 110, RED)
     # sound waves
-    k = seg(t, T_BELL + .12, T_BELL + .9)
+    k = seg(t, T_BELL + .12, T_BELL + 1.4)
     if 0 < k < 1:
         for side in (-1, 1):
             for i in range(2):
-                r = S(52 + i * 16 + 10 * k); cxx, cyy = S(ox + bx + bd / 2), S(oy + by + bd / 2)
+                fr = (k * 3 + i * .5) % 1                  # waves pulse out 3 times
+                r = S(50 + 30 * fr); cxx, cyy = S(ox + bx + bd / 2), S(oy + by + bd / 2)
                 a0 = -35 if side > 0 else 145
-                d.arc((cxx - r, cyy - r, cxx + r, cyy + r), a0, a0 + 70, fill=WHITE + (int(220 * (1 - k)),), width=S(4))
+                d.arc((cxx - r, cyy - r, cxx + r, cyy + r), a0, a0 + 70, fill=WHITE + (int(230 * (1 - fr) * (1 - k ** 3)),), width=S(4))
     paste_scaled(C, L, ox + bx + bd / 2, oy + by + bd / 2, press(t, T_BELL))
 
     # --- like / dislike pill
@@ -150,12 +151,12 @@ def frame(t):
     centered_text(th, S(35), S(35), I_UP if liked else I_UP_O, icon(48), RED if liked else WHITE)
     ts = 1.0
     if liked:
-        k = seg(t, T_LIKE + .12, T_LIKE + .55)
+        k = seg(t, T_LIKE + .12, T_LIKE + .75)
         ts = 1 + .45 * math.sin(k * math.pi) if k < 1 else 1
-    paste_scaled(L, th, 68, lh / 2 - 2, ts, -18 * math.sin(seg(t, T_LIKE + .12, T_LIKE + .5) * math.pi) if liked else 0)
+    paste_scaled(L, th, 68, lh / 2 - 2, ts, -18 * math.sin(seg(t, T_LIKE + .12, T_LIKE + .7) * math.pi) if liked else 0)
     paste_scaled(C, L, ox + lx + lw / 2, oy + ly + lh / 2, press(t, T_LIKE))
     # particle burst from thumb
-    k = seg(t, T_LIKE + .12, T_LIKE + .8)
+    k = seg(t, T_LIKE + .12, T_LIKE + 1.2)
     if 0 < k < 1:
         px0, py0 = ox + lx + 68, oy + ly + lh / 2
         for ang, dist, col, sz in PARTS:
@@ -164,7 +165,7 @@ def frame(t):
             d.ellipse((S(x - s), S(y - s), S(x + s), S(y + s)), fill=col + (int(255 * (1 - k ** 2)),))
 
     # --- cursor
-    ca = seg(t, .55, .8) * (1 - seg(t, 4.9, 5.3))
+    ca = seg(t, 1.3, 1.7) * (1 - seg(t, 8.9, 9.4))
     if ca > 0:
         cx, cy = cursor_at(t); cx += ox - 15; cy += oy - 15       # path is bar-relative
         cs = min(press(t, T_SUB - .02), press(t, T_BELL - .02), press(t, T_LIKE - .02))
@@ -179,7 +180,7 @@ def frame(t):
 
     small = C.resize((CW, CH), Image.LANCZOS)
     # enter / exit animation of the whole bar
-    ein = seg(t, 0, .5); eout = seg(t, DUR - .6, DUR - .15)
+    ein = seg(t, 0, 1.0); eout = seg(t, DUR - 1.3, DUR - .3)
     dy = 140 * (1 - ease_out(ein)) + 140 * ease_io(eout)
     sc = (.85 + .15 * back(ein, 1.4)) if ein < 1 else 1.0
     alpha = ease_out(ein) * (1 - eout)
