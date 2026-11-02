@@ -1,0 +1,42 @@
+{
+  "title": "Horses Sleep Standing Up. So Why Can't Humans?",
+  "thumbnail_text": "STANDING?!",
+  "wpm": 150,
+  "scenes": [
+    {
+      "id": "hook",
+      "label": "STANDING?!",
+      "text": "Meet Gus. Gus is tired. Gus has been standing in line for three hours, and he would love to just close his eyes and sleep right here, on his feet. But he can't. The moment he dozes off, his knees give up and he hits the floor."
+    },
+    {
+      "id": "horse",
+      "label": "WAIT, WHAT?",
+      "text": "Meanwhile, a horse in the field next door is doing exactly that. Eyes closed, head low, fast asleep, and perfectly upright. So what does the horse know that Gus doesn't?"
+    },
+    {
+      "id": "lock",
+      "label": "STAY APPARATUS",
+      "text": "The answer is in the legs. Horses have a system of tendons and ligaments called the stay apparatus. It lets them lock their joints in place, so the skeleton holds the weight instead of the muscles. Standing costs them almost no effort at all."
+    },
+    {
+      "id": "fall",
+      "label": "NO LOCK",
+      "text": "Humans have nothing like that. Our knees stay upright only because our muscles keep working. When we fall asleep, those muscles relax, and the whole tower comes down."
+    },
+    {
+      "id": "rem",
+      "label": "BUT...",
+      "text": "And here's the twist. Even horses can't do all of their sleeping standing up. For deep REM sleep, their muscles go limp too, so they still have to lie down, usually for a short time while the rest of the herd keeps watch."
+    },
+    {
+      "id": "why",
+      "label": "WHY?",
+      "text": "So why did evolution give the lock to horses and not to us? Because a horse is prey on open grassland. Getting up from the ground takes precious seconds, and seconds decide who gets eaten. Our ancestors solved the same problem differently: groups, fire, and a safe place to lie down."
+    },
+    {
+      "id": "outro",
+      "label": "GOOD NIGHT",
+      "text": "So next time you nod off in a long line, don't blame yourself. Blame a few million years of evolution, and maybe find a chair."
+    }
+  ]
+}
