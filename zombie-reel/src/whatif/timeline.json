@@ -1,0 +1,262 @@
+{
+ "fps": 30,
+ "duration": 58.0,
+ "lines": [
+  {
+   "file": "whatif/b1.mp3",
+   "start": 0.3
+  },
+  {
+   "file": "whatif/b2.mp3",
+   "start": 7.4
+  },
+  {
+   "file": "whatif/b3.mp3",
+   "start": 23.2
+  },
+  {
+   "file": "whatif/b4.mp3",
+   "start": 34.4
+  }
+ ],
+ "captions": [
+  {
+   "from": 0.3,
+   "to": 2.2,
+   "text": "What if zombies could only move..."
+  },
+  {
+   "from": 2.64,
+   "to": 3.41,
+   "text": "...when you BLINK?"
+  },
+  {
+   "from": 3.98,
+   "to": 5.33,
+   "text": "At first, it sounds easy."
+  },
+  {
+   "from": 5.71,
+   "to": 6.65,
+   "text": "Just don't blink."
+  },
+  {
+   "from": 7.4,
+   "to": 11.16,
+   "text": "But the average person blinks 15 to 20 times a minute."
+  },
+  {
+   "from": 11.84,
+   "to": 15.47,
+   "text": "That's up to 1,200 chances an hour for them to get closer."
+  },
+  {
+   "from": 16.2,
+   "to": 17.61,
+   "text": "Try to hold your eyes open,"
+  },
+  {
+   "from": 17.96,
+   "to": 19.62,
+   "text": "and within a minute they burn,"
+  },
+  {
+   "from": 19.92,
+   "to": 20.64,
+   "text": "they water,"
+  },
+  {
+   "from": 21.03,
+   "to": 22.32,
+   "text": "and you can't see a thing."
+  },
+  {
+   "from": 23.2,
+   "to": 24.17,
+   "text": "So you team up."
+  },
+  {
+   "from": 24.65,
+   "to": 26.87,
+   "text": "One person watches while the other blinks."
+  },
+  {
+   "from": 27.38,
+   "to": 28.28,
+   "text": "You take turns."
+  },
+  {
+   "from": 28.78,
+   "to": 29.48,
+   "text": "And it works."
+  },
+  {
+   "from": 29.98,
+   "to": 30.69,
+   "text": "Day one."
+  },
+  {
+   "from": 31.27,
+   "to": 31.97,
+   "text": "Day two."
+  },
+  {
+   "from": 32.45,
+   "to": 33.39,
+   "text": "Day three."
+  },
+  {
+   "from": 34.4,
+   "to": 36.19,
+   "text": "But after a day or two without sleep,"
+  },
+  {
+   "from": 36.64,
+   "to": 38.59,
+   "text": "your brain starts shutting off on its own."
+  },
+  {
+   "from": 39.06,
+   "to": 40.05,
+   "text": "MICROSLEEPS."
+  },
+  {
+   "from": 40.43,
+   "to": 41.75,
+   "text": "A few seconds at a time."
+  },
+  {
+   "from": 42.03,
+   "to": 43.01,
+   "text": "You don't even notice."
+  },
+  {
+   "from": 43.52,
+   "to": 45.08,
+   "text": "And every time your eyes close..."
+  },
+  {
+   "from": 45.73,
+   "to": 46.37,
+   "text": "they MOVE."
+  },
+  {
+   "from": 46.94,
+   "to": 49.41,
+   "text": "Sooner or later, everyone has to sleep."
+  },
+  {
+   "from": 49.91,
+   "to": 50.37,
+   "text": "So..."
+  },
+  {
+   "from": 50.79,
+   "to": 51.73,
+   "text": "who's watching YOU?"
+  },
+  {
+   "from": 52.44,
+   "to": 54.44,
+   "text": "Comment how you'd survive the first night."
+  }
+ ],
+ "blinks": [
+  [
+   2.55,
+   0.18
+  ],
+  [
+   12.3,
+   0.14
+  ],
+  [
+   13.1,
+   0.14
+  ],
+  [
+   13.85,
+   0.14
+  ],
+  [
+   14.6,
+   0.14
+  ],
+  [
+   15.35,
+   0.14
+  ],
+  [
+   21.9,
+   0.35
+  ],
+  [
+   39.6,
+   0.45
+  ],
+  [
+   40.9,
+   0.5
+  ],
+  [
+   42.1,
+   0.55
+  ],
+  [
+   44.1,
+   1.6
+  ]
+ ],
+ "scenes": [
+  [
+   "hook",
+   0.0,
+   7.2
+  ],
+  [
+   "eye",
+   7.2,
+   11.7
+  ],
+  [
+   "count",
+   11.7,
+   16.0
+  ],
+  [
+   "strain",
+   16.0,
+   23.0
+  ],
+  [
+   "team",
+   23.0,
+   34.2
+  ],
+  [
+   "awake",
+   34.2,
+   38.9
+  ],
+  [
+   "micro",
+   38.9,
+   46.6
+  ],
+  [
+   "sleep",
+   46.6,
+   49.7
+  ],
+  [
+   "watch",
+   49.7,
+   54.6
+  ],
+  [
+   "end",
+   54.6,
+   58.0
+  ]
+ ]
+}

@@ -72,6 +72,8 @@ export type PersonProps = {
   noLegs?: boolean;
   opacity?: number;
   dark?: number; // 0..1 затемнение (силуэт в тени)
+  /** 0..1 опущенные веки (усталость) */
+  lid?: number;
 };
 
 const Leg: React.FC<{ a: number; bend: number; look: Look; shade?: boolean }> = ({ a, bend, look, shade }) => (
@@ -168,7 +170,7 @@ const Hair: React.FC<{ look: Look; behind?: boolean }> = ({ look, behind }) => {
   );
 };
 
-const Face: React.FC<{ look: Look; talk: number; fear: number; blink: boolean }> = ({ look, talk, fear, blink }) => {
+const Face: React.FC<{ look: Look; talk: number; fear: number; blink: boolean; lid: number }> = ({ look, talk, fear, blink, lid }) => {
   if (look.style === "zombie") {
     return (
       <g>
@@ -197,6 +199,15 @@ const Face: React.FC<{ look: Look; talk: number; fear: number; blink: boolean }>
           <ellipse cx={36} cy={-6} rx={eyeR - 1} ry={eyeR + 1} fill="#fff" stroke={INK} strokeWidth={3.5} />
           <circle cx={17} cy={-5} r={3.6} fill={INK} />
           <circle cx={38} cy={-5} r={3.4} fill={INK} />
+          {lid > 0 ? (
+            <>
+              <rect x={14 - eyeR - 3} y={-6 - eyeR - 5} width={eyeR * 2 + 6} height={(eyeR * 2 + 6) * lid} fill={look.skin} />
+              <rect x={36 - eyeR - 2} y={-6 - eyeR - 4} width={eyeR * 2 + 4} height={(eyeR * 2 + 5) * lid} fill={look.skin} />
+              <line x1={14 - eyeR} y1={-6 - eyeR + (eyeR * 2 + 2) * lid} x2={14 + eyeR} y2={-6 - eyeR + (eyeR * 2 + 2) * lid} stroke={INK} strokeWidth={3.5} strokeLinecap="round" />
+              <line x1={36 - eyeR + 1} y1={-6 - eyeR + (eyeR * 2 + 2) * lid} x2={36 + eyeR - 1} y2={-6 - eyeR + (eyeR * 2 + 2) * lid} stroke={INK} strokeWidth={3.5} strokeLinecap="round" />
+              <path d="M6 12 q8 5 16 0 M30 12 q7 4 14 0" stroke="#7a4a6a" strokeWidth={3} fill="none" opacity={0.8} />
+            </>
+          ) : null}
         </>
       )}
       <path d={`M6 ${-20 - fear * 5} q8 -5 16 -1`} fill="none" stroke={INK} strokeWidth={4} strokeLinecap="round" />
@@ -228,6 +239,7 @@ export const Person: React.FC<PersonProps> = ({
   noLegs = false,
   opacity = 1,
   dark = 0,
+  lid = 0,
 }) => {
   const zombie = look.style === "zombie";
   const swing = Math.sin(phase) * 38 * stride;
@@ -302,7 +314,7 @@ export const Person: React.FC<PersonProps> = ({
           <rect x={-10} y={30} width={24} height={20} fill={look.skinShade} stroke={INK} strokeWidth={4} />
           <ellipse cx={4} cy={0} rx={48} ry={46} fill={look.skin} stroke={INK} strokeWidth={SW} />
           <ellipse cx={-28} cy={4} rx={9} ry={12} fill={look.skinShade} stroke={INK} strokeWidth={4} />
-          <Face look={look} talk={talk} fear={fear} blink={blink} />
+          <Face look={look} talk={talk} fear={fear} blink={blink} lid={lid} />
           <Hair look={look} />
         </g>
         {/* передняя рука */}
